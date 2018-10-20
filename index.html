@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="https://fonts.googleapis.com/css?family=Roboto|Roboto+Mono" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <title>HTML5 Semantic Elements</title>
+</head>
+
+<body>
+
+  <nav id="navbar">
+    <header>HTML5 Semantic Elements</header>
+    <ul>
+      <li>
+        <a href="#introduction" class="nav-link">Introduction</a>
+      </li>
+      <li>
+        <a href="#header" class="nav-link">Header</a>
+      </li>
+      <li>
+        <a href="#nav" class="nav-link">Nav</a>
+      </li>
+      <li>
+        <a href="#section" class="nav-link">Section</a>
+      </li>
+      <li>
+        <a href="#article" class="nav-link">Article</a>
+      </li>
+      <li>
+        <a href="#aside" class="nav-link">Aside</a>
+      </li>
+      <li>
+        <a href="#footer" class="nav-link">Footer</a>
+      </li>
+    </ul>
+  </nav>
+
+  <main id="main-doc">
+
+    <section class="main-section" id="introduction">
+      <header><h1>Introduction</h1></header>
+      <p>HTML5 has a set of so called semantic elements that will clearly communicate what kind of content is inside
+        those tags.
+        This is explicit information that can help robots from Google etc. and also screen readers and such.
+      </p>
+      <p>Instead of using a whole lot of divs to structure the page, we can use semantic tags for the same purpose.
+        While also
+        clearly showing what each tag should do.
+      </p>
+      <pre><code>&lt;nav&gt;
+  &lt;ul&gt;
+    &lt;li&gt;&lt;a href="index.html"&gt;Home&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="services.html"&gt;Services&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="about.html"&gt;About&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/nav&gt;</code></pre>
+
+
+
+      <pre><code>&lt;div&gt;
+  &lt;ul&gt;
+    &lt;li&gt;&lt;a href="index.html"&gt;Home&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="services.html"&gt;Services&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="about.html"&gt;About&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;</code></pre>
+
+      <p>As seen in the examples above, using the nav tag explicitly shows that this is a navigation bar, something
+        that
+        isn't as clear with the div example.
+      </p>
+      <p>Here are some of the semantic elements of HTML5:</p>
+      <ul>
+        <li>&lt;header&gt;</li>
+        <li>&lt;footer&gt;</li>
+        <li>&lt;main&gt;</li>
+        <li>&lt;aside&gt;</li>
+        <li>&lt;nav&gt;</li>
+        <li>&lt;section&gt;</li>
+        <li>&lt;article&gt;</li>
+        <li>&lt;summary&gt;</li>
+        <li>&lt;time&gt;</li>
+        <li>&lt;details&gt;</li>
+        <li>&lt;figure&gt;</li>
+        <li>&lt;figcaption&gt;</li>
+        <li>&lt;mark&gt;</li>
+      </ul>
+    </section>
+
+    <section class="main-section" id="header">
+      <header><h1>Header</h1></header>
+      <p>The &lt;header&gt; element represents a container for introductory content or a set of navigational links.</p>
+
+      <p>A &lt;header&gt; element typically contains:</p>
+
+      <ul>
+        <li>one or more heading elements (&lt;h1&gt; - &lt;h6&gt;)</li>
+        <li>logo or icon</li>
+        <li>authorship information</li>
+      </ul>
+      <p>You can have several &lt;header&gt; elements in one document.</p>
+
+      <p>Note: A &lt;header&gt; tag cannot be placed within a &lt;footer&gt;, &lt;address&gt; or another &lt;header&gt;
+        element.</p>
+
+      <pre><code>&lt;article&gt;
+  &lt;header&gt;
+    &lt;h1&gt;Most important heading here&lt;/h1&gt;
+    &lt;h3&gt;Less important heading here&lt;/h3&gt;
+    &lt;p&gt;Some additional information here&lt;/p&gt;
+  &lt;/header&gt;
+  &lt;p&gt;Lorem Ipsum dolor set amet....&lt;/p&gt;
+&lt;/article&gt;</code></pre>
+
+    </section>
+
+    <section class="main-section" id="nav">
+      <header><h1>Nav</h1></header>
+      <p>The &lt;nav&gt; tag defines a set of navigation links.</p>
+
+      <p>Notice that NOT all links of a document should be inside a &lt;nav&gt; element. The &gt;nav&lt; element is
+        intended only for major block of navigation links.</p>
+
+      <p>Browsers, such as screen readers for disabled users, can use this element to determine whether to omit the
+        initial rendering of this content.</p>
+
+
+      <pre><code>&lt;nav&gt;
+  &lt;a href="/html/"&gt;HTML&lt;/a&gt; |
+  &lt;a href="/css/"&gt;CSS&lt;/a&gt; |
+  &lt;a href="/js/"&gt;JavaScript&lt;/a&gt; |
+  &lt;a href="/jquery/"&gt;jQuery&lt;/a&gt;
+&lt;/nav&gt;</code></pre>
+
+    </section>
+
+    <section class="main-section" id="section">
+      <header><h1>Section</h1></header>
+      <p>The &lt;section&gt; tag defines sections in a document, such as chapters, headers, footers, or any other
+        sections of the document.</p>
+
+
+      <pre><code>&lt;section&gt;
+  &lt;h1&gt;WWF&lt;/h1&gt;
+  &lt;p&gt;The World Wide Fund for Nature (WWF) is....&lt;/p&gt;
+&lt;/section&gt;</code></pre>
+
+    </section>
+
+    <section class="main-section" id="article">
+      <header><h1>Article</h1></header>
+      <p>The &lt;article&gt; tag specifies independent, self-contained content.</p>
+
+      <p>An article should make sense on its own and it should be possible to distribute it independently from the rest
+        of the site.</p>
+
+      <p>Potential sources for the &lt;article&gt; element:</p>
+      <ul>
+        <li>Forum post</li>
+        <li>Blog post</li>
+        <li>story</li>
+        <li>Comment</li>
+      </ul>
+
+
+      <pre><code>&lt;article&gt;
+  &lt;h1&gt;Google Chrome&lt;/h1&gt;
+  &lt;p&gt;Google Chrome is a free, open-source web browser developed by Google, released in 2008.&lt;/p&gt;
+&lt;/article&gt;</code></pre>
+
+    </section>
+
+    <section class="main-section" id="aside">
+      <header><h1>Aside</h1></header>
+      <p>The &lt;aside&gt; tag defines some content aside from the content it is placed in. The aside content should be
+        related to the surrounding content.</p>
+
+
+      <pre><code>&lt;p&gt;My family and I visited The Epcot center this summer.&lt;/p&gt;
+&lt;aside&gt;
+  &lt;h4&gt;Epcot Center&lt;/h4&gt;
+  &lt;p&gt;The Epcot Center is a theme park in Disney World, Florida.&lt;/p&gt;
+&lt;/aside&gt;</code></pre>
+
+    </section>
+
+    <section class="main-section" id="footer">
+      <header><h1>Footer</h1></header>
+      <p>The &lt;footer&gt; tag defines a footer for a document or section.</p>
+      <p>A &lt;footer&gt; element should contain information about its containing element.</p>
+      <p>A &lt;footer&gt; element typically contains:</p>
+      <ul>
+        <li>authorship information</li>
+        <li>copyright information</li>
+        <li>contact information</li>
+        <li>sitemap</li>
+        <li>back to top links</li>
+        <li>related documents</li>
+      </ul>
+      <p>You can have several &lt;footer&gt; elements in one document.</p>
+
+
+
+      <pre><code>&lt;footer&gt;
+  &lt;p&gt;Posted by: Hege Refsnes&lt;/p&gt;
+  &lt;p&gt;Contact information: &lt;a href="mailto:someone@example.com"&gt;someone@example.com&lt;/a&gt;.&lt;/p&gt;
+&lt;/footer&gt;</code></pre>
+
+    </section>
+
+  </main>
+
+  <footer>
+      <p>Beinnor, Copyright &copy; 2018</p>
+      <p>This is a project on <a href="https://www.freecodecamp.org">freecodecamp</a>, made by <a href="http://beinnor.github.io/">Beinnor</a></p>
+  </footer>
+
+  <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+</body>
+
+</html>
