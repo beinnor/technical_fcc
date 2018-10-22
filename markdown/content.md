@@ -1,8 +1,12 @@
 # Introduction
 
-A typical website is usually divides up into different sections. A header, a navbar, footer and main area. It is possible to use <div> to section up the site, but this has a few drawback. A <div> is a grouping tag. It is used to group stuff together, and it doesn't explicitily tell the user, or browser, what type of content this is.
+A typical website is usually divides up into different sections. A header, a navbar, footer and main area. 
 
-These following two examples shows how semantic tags explicitly tells us what kind of content is inside the tags. 
+It is possible to use <div> to section up the site, but this has a few drawback. A <div> is a grouping tag. It is used to group stuff together, and it doesn't implicitly tell us what kind of content is between these tags.
+
+Semantic tags on the other hand has implied meaning. The `<nav>` tag tells us implicitly that the content inside is for site navigation. This is great for screen readers, web crawlers etc.
+
+These following two examples shows how semantic tags implicitly tells us what kind of content is inside the tags. 
 
 ```
 <body>
@@ -36,22 +40,21 @@ These following two examples shows how semantic tags explicitly tells us what ki
 </body>
 ```
 
-The second example clearly shows us which section is which without even looking at the content. This is great for screen readers, search engine robots, developers and everyone.
+The second example clearly shows us which section is which without even looking at the content.
 
 ---
 
 # Header
 
-The `<header>` element represents a container for introductory content or a set of navigational links.
+The `<header>` element represents a container for introductory content or a set of navigational links. Also elements like a search form, author name or a logo can fit here.
 
 A `<header>` element typically contains:
 
-* one or more heading elements (`<h1>` - `<h6>`)
+* heading elements (`<h1>` - `<h6>`)
 * logo or icon
 * authorship information
-* You can have several `<header>` elements in one document.
 
-Note: A `<header>` tag cannot be placed within a `<footer>`, `<address>` or another `<header>` element.
+Note: There can be several `<header>` elements in one document. But a `<header>` tag cannot be placed within a `<footer>`, `<address>` or another `<header>` element.
 
 ```
 <header>
@@ -66,9 +69,7 @@ Note: A `<header>` tag cannot be placed within a `<footer>`, `<address>` or anot
 
 # Footer
 
-The `<footer>` tag defines a footer for a document or section.
-
-A `<footer>` element should contain information about its containing element.
+The `<footer>` tag defines a footer for a document or section. Typically, it contains information about the author of a section, links to related documents or perhaps information about the author.
 
 A `<footer>` element typically contains:
 
@@ -79,7 +80,7 @@ A `<footer>` element typically contains:
 * back to top links
 * related documents
 
-You can have several `<footer>` elements in one document.
+There can be multiple `<footer>` elements in one document.
 
 ```
 <footer>
@@ -91,11 +92,13 @@ ___
 
 # Nav
 
-The `<nav>` tag defines a set of navigation links.
+The `<nav>` tag defines a section of a page that provides site navigation links.
 
 Notice that NOT all links of a document should be inside a `<nav>` element. The `<nav>` element is intended only for major block of navigation links.
 
-Browsers, such as screen readers for disabled users, can use this element to determine whether to omit the initial rendering of this content.
+You shouldn't put all links inside a `<nav>` element. `<nav>` is only intended for blocks of navigation links, like a menu, or table of content.
+
+Accessibility tools, such as screen readers, can use this element to determine whether to omit the initial rendering of this content.
 
 ```
 <nav>
@@ -109,7 +112,7 @@ ___
 
 # Aside
 
-The `<aside>` tag defines some content aside from the content it is placed in. The aside content should be related to the surrounding content.
+The `<aside>` tag defines a block of content that is only indirectly related to the main content. It could for example be a sidebar containing further information about something which is mentioned in the main content.
 
 ```
 <p>Today I finished yet another project on freecodecamp :).</p>
@@ -125,6 +128,8 @@ The `<aside>` tag defines some content aside from the content it is placed in. T
 
 The `<section>` tag defines sections in a document, such as chapters, headers, footers, or any other sections of the document.
 
+The `<section>` tag defines a standalone section, without a more specific semantic element to represent it. Often a section will have a heading.
+
 ```
 <section>
   <h1>Why Lazerman?</h1>
@@ -136,11 +141,11 @@ ___
 
 # Article
 
-The `<article>` tag specifies independent, self-contained content.
+The `<article>` tag specifies independent, self-contained content on the page.
 
 An article should make sense on its own and it should be possible to distribute it independently from the rest of the site.
 
-Potential sources for the `<article>` element:
+Examples include:
 
 * Forum post
 * Blog post
