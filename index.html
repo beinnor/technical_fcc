@@ -22,7 +22,13 @@
         <a href="#header" class="nav-link">Header</a>
       </li>
       <li>
+        <a href="#footer" class="nav-link">Footer</a>
+      </li>
+      <li>
         <a href="#nav" class="nav-link">Nav</a>
+      </li>
+      <li>
+        <a href="#aside" class="nav-link">Aside</a>
       </li>
       <li>
         <a href="#section" class="nav-link">Section</a>
@@ -30,193 +36,191 @@
       <li>
         <a href="#article" class="nav-link">Article</a>
       </li>
-      <li>
-        <a href="#aside" class="nav-link">Aside</a>
-      </li>
-      <li>
-        <a href="#footer" class="nav-link">Footer</a>
-      </li>
     </ul>
   </nav>
 
   <main id="main-doc">
 
     <section class="main-section" id="introduction">
-      <header><h1>Introduction</h1></header>
-      <p>HTML5 has a set of so called semantic elements that will clearly communicate what kind of content is inside
-        those tags.
-        This is explicit information that can help robots from Google etc. and also screen readers and such.
-      </p>
-      <p>Instead of using a whole lot of divs to structure the page, we can use semantic tags for the same purpose.
-        While also
-        clearly showing what each tag should do.
-      </p>
-      <pre><code>&lt;nav&gt;
-  &lt;ul&gt;
-    &lt;li&gt;&lt;a href="index.html"&gt;Home&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href="services.html"&gt;Services&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href="about.html"&gt;About&lt;/a&gt;&lt;/li&gt;
-  &lt;/ul&gt;
-&lt;/nav&gt;</code></pre>
-
-
-
-      <pre><code>&lt;div&gt;
-  &lt;ul&gt;
-    &lt;li&gt;&lt;a href="index.html"&gt;Home&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href="services.html"&gt;Services&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href="about.html"&gt;About&lt;/a&gt;&lt;/li&gt;
-  &lt;/ul&gt;
-&lt;/div&gt;</code></pre>
-
-      <p>As seen in the examples above, using the nav tag explicitly shows that this is a navigation bar, something
-        that
-        isn't as clear with the div example.
-      </p>
-      <p>Here are some of the semantic elements of HTML5:</p>
-      <ul>
-        <li>&lt;header&gt;</li>
-        <li>&lt;footer&gt;</li>
-        <li>&lt;main&gt;</li>
-        <li>&lt;aside&gt;</li>
-        <li>&lt;nav&gt;</li>
-        <li>&lt;section&gt;</li>
-        <li>&lt;article&gt;</li>
-        <li>&lt;summary&gt;</li>
-        <li>&lt;time&gt;</li>
-        <li>&lt;details&gt;</li>
-        <li>&lt;figure&gt;</li>
-        <li>&lt;figcaption&gt;</li>
-        <li>&lt;mark&gt;</li>
-      </ul>
+      <header>
+        <h1>Introduction</h1>
+      </header>
+      <p>A typical website is usually divides up into different sections. A header, a navbar, footer and main area.</p>
+      <p>It is possible to use <code>&lt;div&gt;</code> to section up the site, but this has a few drawback. A <code>&lt;div&gt;</code> is a
+        grouping
+        tag. It is used to group stuff together, and it doesn’t implicitly tell us what kind of content is between
+        these
+        tags.</p>
+      <p>Semantic tags on the other hand has implied meaning. The <code>&lt;nav&gt;</code> tag tells us implicitly that
+        the
+        content inside is for site navigation. This is great for screen readers, web crawlers etc.</p>
+      <p>These following two examples shows how semantic tags implicitly tells us what kind of content is inside the
+        tags.</p>
+      <pre><code>&lt;body&gt;
+  &lt;div&gt;
+    &lt;a href=&quot;index.html&quot;&gt;Home&lt;/a&gt;
+    &lt;a href=&quot;about.html&quot;&gt;About&lt;/a&gt;
+  &lt;/div&gt;
+  &lt;div&gt;
+    &lt;h1&gt;Lazerman&lt;/h1&gt;
+    &lt;p&gt;
+      Lazerman is the greatest hero of all time.
+    &lt;/p&gt;
+  &lt;/div&gt;
+  &lt;div&gt;
+    Copyright 2018 Lazerman
+  &lt;/div&gt;
+&lt;/body&gt;</code></pre>
+      <pre><code>&lt;body&gt;
+  &lt;header&gt;
+    &lt;a href=&quot;index.html&quot;&gt;Home&lt;/a&gt;
+    &lt;a href=&quot;about.html&quot;&gt;About&lt;/a&gt;
+  &lt;/header&gt;
+  &lt;main&gt;
+    &lt;h1&gt;Lazerman&lt;/h1&gt;
+    &lt;p&gt;
+      Lazerman is the greatest hero of all time.
+    &lt;/p&gt;
+  &lt;/main&gt;
+  &lt;footer&gt;
+    Copyright 2018 Lazerman
+  &lt;/footer&gt;
+&lt;/body&gt;</code></pre>
+      <p>The second example clearly shows us which section is which without even looking at the content.</p>
     </section>
 
     <section class="main-section" id="header">
-      <header><h1>Header</h1></header>
-      <p>The &lt;header&gt; element represents a container for introductory content or a set of navigational links.</p>
-
-      <p>A &lt;header&gt; element typically contains:</p>
-
+      <header>
+        <h1>Header</h1>
+      </header>
+      <p>The <code>&lt;header&gt;</code> element represents a container for introductory content or a set of
+        navigational
+        links. Also elements like a search form, author name or a logo can fit here.</p>
+      <p>A <code>&lt;header&gt;</code> element typically contains:</p>
       <ul>
-        <li>one or more heading elements (&lt;h1&gt; - &lt;h6&gt;)</li>
-        <li>logo or icon</li>
-        <li>authorship information</li>
+        <li>heading elements (<code>&lt;h1&gt;</code> - <code>&lt;h6&gt;</code>)</li>
+        <li>author info</li>
+        <li>navigational aids</li>
+        <li>logo</li>
       </ul>
-      <p>You can have several &lt;header&gt; elements in one document.</p>
-
-      <p>Note: A &lt;header&gt; tag cannot be placed within a &lt;footer&gt;, &lt;address&gt; or another &lt;header&gt;
+      <p>Note: There can be several <code>&lt;header&gt;</code> elements in one document. But a <code>&lt;header&gt;</code>
+        tag cannot be placed within a <code>&lt;footer&gt;</code>, <code>&lt;address&gt;</code> or another <code>&lt;header&gt;</code>
         element.</p>
-
-      <pre><code>&lt;article&gt;
-  &lt;header&gt;
-    &lt;h1&gt;Most important heading here&lt;/h1&gt;
-    &lt;h3&gt;Less important heading here&lt;/h3&gt;
-    &lt;p&gt;Some additional information here&lt;/p&gt;
-  &lt;/header&gt;
-  &lt;p&gt;Lorem Ipsum dolor set amet....&lt;/p&gt;
-&lt;/article&gt;</code></pre>
-
-    </section>
-
-    <section class="main-section" id="nav">
-      <header><h1>Nav</h1></header>
-      <p>The &lt;nav&gt; tag defines a set of navigation links.</p>
-
-      <p>Notice that NOT all links of a document should be inside a &lt;nav&gt; element. The &gt;nav&lt; element is
-        intended only for major block of navigation links.</p>
-
-      <p>Browsers, such as screen readers for disabled users, can use this element to determine whether to omit the
-        initial rendering of this content.</p>
-
-
-      <pre><code>&lt;nav&gt;
-  &lt;a href="/html/"&gt;HTML&lt;/a&gt; |
-  &lt;a href="/css/"&gt;CSS&lt;/a&gt; |
-  &lt;a href="/js/"&gt;JavaScript&lt;/a&gt; |
-  &lt;a href="/jquery/"&gt;jQuery&lt;/a&gt;
-&lt;/nav&gt;</code></pre>
-
-    </section>
-
-    <section class="main-section" id="section">
-      <header><h1>Section</h1></header>
-      <p>The &lt;section&gt; tag defines sections in a document, such as chapters, headers, footers, or any other
-        sections of the document.</p>
-
-
-      <pre><code>&lt;section&gt;
-  &lt;h1&gt;WWF&lt;/h1&gt;
-  &lt;p&gt;The World Wide Fund for Nature (WWF) is....&lt;/p&gt;
-&lt;/section&gt;</code></pre>
-
-    </section>
-
-    <section class="main-section" id="article">
-      <header><h1>Article</h1></header>
-      <p>The &lt;article&gt; tag specifies independent, self-contained content.</p>
-
-      <p>An article should make sense on its own and it should be possible to distribute it independently from the rest
-        of the site.</p>
-
-      <p>Potential sources for the &lt;article&gt; element:</p>
-      <ul>
-        <li>Forum post</li>
-        <li>Blog post</li>
-        <li>story</li>
-        <li>Comment</li>
-      </ul>
-
-
-      <pre><code>&lt;article&gt;
-  &lt;h1&gt;Google Chrome&lt;/h1&gt;
-  &lt;p&gt;Google Chrome is a free, open-source web browser developed by Google, released in 2008.&lt;/p&gt;
-&lt;/article&gt;</code></pre>
-
-    </section>
-
-    <section class="main-section" id="aside">
-      <header><h1>Aside</h1></header>
-      <p>The &lt;aside&gt; tag defines some content aside from the content it is placed in. The aside content should be
-        related to the surrounding content.</p>
-
-
-      <pre><code>&lt;p&gt;My family and I visited The Epcot center this summer.&lt;/p&gt;
-&lt;aside&gt;
-  &lt;h4&gt;Epcot Center&lt;/h4&gt;
-  &lt;p&gt;The Epcot Center is a theme park in Disney World, Florida.&lt;/p&gt;
-&lt;/aside&gt;</code></pre>
-
+      <pre><code>&lt;header&gt;
+  &lt;ul&gt;
+    &lt;li&gt;&lt;a href=&quot;index.html&quot;&gt;Home&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;about.html&quot;&gt;About&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/header&gt;</code></pre>
     </section>
 
     <section class="main-section" id="footer">
-      <header><h1>Footer</h1></header>
-      <p>The &lt;footer&gt; tag defines a footer for a document or section.</p>
-      <p>A &lt;footer&gt; element should contain information about its containing element.</p>
-      <p>A &lt;footer&gt; element typically contains:</p>
+      <header>
+        <h1>Footer</h1>
+      </header>
+      <p>The <code>&lt;footer&gt;</code> tag defines a footer for a document or section. Typically, it contains
+        information
+        about the author of a section, links to related documents or perhaps information about the author.</p>
+      <p>A <code>&lt;footer&gt;</code> element typically contains:</p>
       <ul>
-        <li>authorship information</li>
+        <li>author infor</li>
         <li>copyright information</li>
+        <li>back to top links</li>
         <li>contact information</li>
         <li>sitemap</li>
-        <li>back to top links</li>
         <li>related documents</li>
       </ul>
-      <p>You can have several &lt;footer&gt; elements in one document.</p>
-
-
-
+      <p>There can be multiple <code>&lt;footer&gt;</code> elements in one document.</p>
       <pre><code>&lt;footer&gt;
-  &lt;p&gt;Posted by: Hege Refsnes&lt;/p&gt;
-  &lt;p&gt;Contact information: &lt;a href="mailto:someone@example.com"&gt;someone@example.com&lt;/a&gt;.&lt;/p&gt;
+  &lt;p&gt;Copyright 2018, Lazerman&lt;/p&gt;
 &lt;/footer&gt;</code></pre>
+    </section>
 
+
+    <section class="main-section" id="nav">
+      <header>
+        <h1>Nav</h1>
+      </header>
+      <p>The <code>&lt;nav&gt;</code> tag defines a section of a page that provides site navigation links.</p>
+      <p>Notice that NOT all links of a document should be inside a <code>&lt;nav&gt;</code> element. The <code>&lt;nav&gt;</code>
+        element is intended only for major block of navigation links.</p>
+      <p>You shouldn’t put all links inside a <code>&lt;nav&gt;</code> element. <code>&lt;nav&gt;</code> is only
+        intended
+        for blocks of navigation links, like a menu, or table of content.</p>
+      <p>Accessibility tools, such as screen readers, can use this element to determine whether to omit the initial
+        rendering of this content.</p>
+      <pre><code>&lt;nav&gt;
+  &lt;a href=&quot;index.html&quot;&gt;Home&lt;/a&gt; |
+  &lt;a href=&quot;about.html&quot;&gt;About&lt;/a&gt; |
+  &lt;a href=&quot;contact.html&quot;&gt;Contact&lt;/a&gt;
+&lt;/nav&gt;</code></pre>
+    </section>
+
+    <section class="main-section" id="aside">
+      <header>
+        <h1>Aside</h1>
+      </header>
+      <p>The <code>&lt;aside&gt;</code> tag defines a block of content that is only indirectly related to the main
+        content.
+        It could for example be a sidebar containing further information about something which is mentioned in the main
+        content.</p>
+      <pre><code>&lt;p&gt;Today I finished yet another project on freecodecamp :).&lt;/p&gt;
+&lt;aside&gt;
+  &lt;h4&gt;Freecodecamp&lt;/h4&gt;
+  &lt;p&gt;
+    Freecodecamp is an open source 
+    community that helps people learn how to code.
+  &lt;/p&gt;
+&lt;/aside&gt;</code></pre>
+    </section>
+
+    <section class="main-section" id="section">
+      <header>
+        <h1>Section</h1>
+      </header>
+      <p>The <code>&lt;section&gt;</code> tag defines sections in a document, such as chapters, headers, footers, or
+        any
+        other sections of the document.</p>
+      <p>The <code>&lt;section&gt;</code> tag defines a standalone section, without a more specific semantic element to
+        represent it. Often a section will have a heading.</p>
+      <pre><code>&lt;section&gt;
+  &lt;h1&gt;Why Lazerman?&lt;/h1&gt;
+  &lt;p&gt;
+    Lazerman is a lorem ipsum dolor sit amet.
+  &lt;/p&gt;
+&lt;/section&gt;</code></pre>
+    </section>
+
+    <section class="main-section" id="article">
+      <header>
+        <h1>Article</h1>
+      </header>
+      <p>The <code>&lt;article&gt;</code> tag specifies independent, self-contained content on the page.</p>
+      <p>An article should make sense on its own and it should be possible to distribute it independently from the rest
+        of
+        the site.</p>
+      <p>Examples include:</p>
+      <ul>
+        <li>Forum post</li>
+        <li>Blog post</li>
+        <li>Story</li>
+        <li>Comment</li>
+      </ul>
+      <pre><code>&lt;article&gt;
+  &lt;h1&gt;Freecodecamp&lt;/h1&gt;
+  &lt;p&gt;
+    Freecodecamp is an open source community 
+    that helps people learn how to code.
+  &lt;/p&gt;
+&lt;/article&gt;</code></pre>
     </section>
 
   </main>
 
   <footer>
-      <p>Beinnor, Copyright &copy; 2018</p>
-      <p>This is a project on <a href="https://www.freecodecamp.org">freecodecamp</a>, made by <a href="http://beinnor.github.io/">Beinnor</a></p>
+    <p><a href="#top" id="toplink">Go to top</a></p>
+    <p>Beinnor, Copyright &copy; 2018</p>
+    <p>This is a project on <a href="https://www.freecodecamp.org">freecodecamp</a>, made by <a href="http://beinnor.github.io/">Beinnor</a></p>
   </footer>
 
   <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>

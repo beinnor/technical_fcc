@@ -65,11 +65,16 @@ body {
 }
 
 main {
-  margin-left: 300px;
+  margin-left: 310px;
 }
 
 section {
-  margin: 10px 5px 30px 20px;
+  margin: 0;
+  border-bottom: 1px dotted var(--color-black);
+}
+
+section:last-child {
+  border-bottom: 0;
 }
 
 section ul {
@@ -121,6 +126,11 @@ pre > code {
   background-color: transparent;
   white-space: pre; }
 
+#toplink {
+  display: none;
+}
+
+
 
 @media(max-width: 768px) {
 
@@ -151,4 +161,7 @@ pre > code {
     margin: auto;
   }
 
+  #toplink {
+    display: inline;
+  }
 }
