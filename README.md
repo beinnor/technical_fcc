@@ -1,2 +1,2 @@
 # technical_fcc
-FCC Responsive Web Design Projects - Build a Technical Documentation Page.
+Project on [freecodecamp.org](https://www.freecodecamp.org). Responsive Web Design Certification. Build a technical documentation page.
